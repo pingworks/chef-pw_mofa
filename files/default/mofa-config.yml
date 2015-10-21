@@ -30,4 +30,4 @@ binrepo_host: repo
 binrepo_ssh_port: 22
 binrepo_ssh_user: jenkins
 binrepo_ssh_keyfile: ~/.ssh/id_rsa
-binrepo_import_dir: /data/cookbooks
+binrepo_import_dir: /data/cookbooks/import
