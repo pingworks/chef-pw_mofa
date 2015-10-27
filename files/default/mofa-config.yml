@@ -3,7 +3,7 @@
 # Admin User Account that should be used for all mofa tasks.
 # The user has to be able to login passwordless
 # and has tohave passwordless sudo permissions.
-ssh_user: jenkins
+ssh_user: root
 ssh_keyfile: ~/.ssh/id_rsa
 
 # where to build tmporary cookbook packages and so on
