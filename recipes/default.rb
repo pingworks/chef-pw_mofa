@@ -24,9 +24,9 @@ bash 'install mofa' do
   code <<-EOC
   export HOME=#{node['pw_mofa']['userhome']}
   eval "$(chef shell-init bash)"
-  chef gem install mofa
+  chef gem install mofa -v #{node['pw_mofa']['version']}
   EOC
-  not_if "test -f #{node['pw_mofa']['userhome']}/.chefdk/gem/ruby/2.1.0/gems/mofa-*/Gemfile"
+  not_if "test -f #{node['pw_mofa']['userhome']}/.chefdk/gem/ruby/2.1.0/gems/mofa-#{node['pw_mofa']['version']}/Gemfile"
 end
 
 directory "#{node['pw_mofa']['userhome']}/.mofa" do
